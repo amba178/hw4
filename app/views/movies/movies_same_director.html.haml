@@ -1,0 +1,8 @@
+%table#movies
+	%thead 
+		%tr 
+			%th Name of movie
+	%tbody
+		-@movies.each do |movie|
+			%tr
+				%td= movie.title
