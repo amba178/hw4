@@ -3,14 +3,14 @@ require 'rails_helper'
 
 RSpec.describe MoviesController, type: :controller do 
 
-	let!(:m1) {FactoryGirl.create(:movie, :director => "Salem Ali", title: "Judgement Day")}
-	let!(:m2) {FactoryGirl.create(:movie, :director => " ", title: "Aladdin")}
-	let!(:m3) {FactoryGirl.create(:movie, :director => "Salem Ali", title: "Judgement Day")}
+    let!(:m1) {FactoryGirl.create(:movie, :director => "Salem Ali", title: "Judgement Day")}
+    let!(:m2) {FactoryGirl.create(:movie, :director => " ", title: "Aladdin")}
+    let!(:m3) {FactoryGirl.create(:movie, :director => "Salem Ali", title: "Judgement Day")}
 
-	describe "GET #movies_same_dictor" do
-	    it "search_directors route should map to movies_same_director action" do
-	    	expect(:get => '/search_directors/:id').to route_to(controller: "movies", action: 'movies_same_director', id: ":id")
-	    end
+    describe "GET #movies_same_dictor" do
+        it "search_directors route should map to movies_same_director action" do
+        	expect(:get => '/search_directors/:id').to route_to(controller: "movies", action: 'movies_same_director', id: ":id")
+        end
 
     end
 
