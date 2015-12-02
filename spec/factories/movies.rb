@@ -5,5 +5,5 @@ FactoryGirl.define do
 		description "Action pack movie of the year"
 		release_date DateTime.now 
 		director "Joe Doe"
-    end
+	end
 end
